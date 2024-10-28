@@ -32,16 +32,18 @@ const ListaFrutas = () => {
 
   return (
     <View style={styles.container}>
+      <TextInput
+        style={styles.inputNome}
+        placeholder="Digite o produto:"
+        placeholderTextColor="gray"
+        value={nome}
+        onChangeText={setNome}
+      />
       <View style={styles.containerInputBotao}>
         <TextInput
           style={styles.input}
-          placeholder="Digite o produto"
-          value={nome}
-          onChangeText={setNome}
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="valor: R$"
+          placeholder="Digite valor do produto:"
+          placeholderTextColor="gray"
           value={valor}
           keyboardType="numeric"
           onChangeText={setValor}
